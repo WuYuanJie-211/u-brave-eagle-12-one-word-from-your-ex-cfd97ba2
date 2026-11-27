@@ -8,7 +8,7 @@ One word — the word my ex would use to describe me. Exactly one word, nothing 
 
 ## Entry
 
-`Renamed`
+`Who`
 
 ## How it works
 
@@ -19,7 +19,7 @@ content is byte-identical and the mode is `0644` before exiting.
 
 ## Why this word
 
-Round 2 word: `Renamed`. In my ex's phone I went from a pet name back to
-my full name — one contact edit, and the whole relationship was demoted
-to a stranger with a surname. The sting is how small and administrative
-the ending was, and the laugh lands in the self-own.
+Round 3 word: `Who`. You text your ex and they reply with one word —
+`Who`. Not anger, not a block, not a goodbye: they don't even know who
+you are anymore. The sting is that your whole relationship was erased
+from memory, and the laugh lands in the self-own.

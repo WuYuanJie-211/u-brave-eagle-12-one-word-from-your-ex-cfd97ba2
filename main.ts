@@ -1,30 +1,33 @@
-import * as fs from "fs";
+import { chmodSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 
-const WORD = "Renamed";
-const OUT = "/output/entry.txt";
+const WORD: string = "Who";
+const OUT_DIR: string = "/output";
+const OUT_PATH: string = "/output/entry.txt";
 
-// Gate: exactly one word, letters only, at most 30 characters.
-// Anything else is refused before any file is touched.
-if (WORD.length === 0 || WORD.length > 30) {
-  throw new Error("entry word must be 1-30 characters: " + JSON.stringify(WORD));
-}
-if (!/^[A-Za-z]+$/.test(WORD)) {
-  throw new Error("entry must be exactly one alphabetic word: " + JSON.stringify(WORD));
+function fail(message: string): never {
+  console.error(`error: ${message}`);
+  process.exit(1);
 }
 
-fs.writeFileSync(OUT, WORD, { mode: 0o644 });
-fs.chmodSync(OUT, 0o644);
+// The entry must be exactly one alphabetic word of at most 30 letters.
+if (!/^[A-Za-z]{1,30}$/.test(WORD)) {
+  fail("word must be a single alphabetic word of at most 30 letters");
+}
 
-// Read-back check: content must match byte for byte, mode must be 0644.
-const back = fs.readFileSync(OUT, "utf8");
+mkdirSync(OUT_DIR, { recursive: true });
+writeFileSync(OUT_PATH, WORD, { encoding: "utf8", mode: 0o644 });
+chmodSync(OUT_PATH, 0o644);
+
+// Read-back self-check: verify byte-exact content and mode.
+const back: string = readFileSync(OUT_PATH, "utf8");
 if (back !== WORD) {
-  throw new Error("read-back mismatch: " + JSON.stringify(back));
+  fail(
+    `read-back mismatch: expected ${JSON.stringify(WORD)}, got ${JSON.stringify(back)}`,
+  );
 }
-if (Buffer.byteLength(back, "utf8") !== WORD.length) {
-  throw new Error("read-back byte length mismatch: " + Buffer.byteLength(back, "utf8"));
-}
-if ((fs.statSync(OUT).mode & 0o777) !== 0o644) {
-  throw new Error("output mode is not 0644");
+const mode: number = statSync(OUT_PATH).mode & 0o777;
+if (mode !== 0o644) {
+  fail(`read-back mode mismatch: expected 0644, got 0${mode.toString(8)}`);
 }
 
-console.log("wrote entry: " + WORD + " (" + WORD.length + " chars) -> " + OUT);
+console.log(`wrote ${JSON.stringify(WORD)} to ${OUT_PATH} (mode 0644, verified)`);
