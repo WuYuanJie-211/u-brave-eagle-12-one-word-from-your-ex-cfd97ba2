@@ -8,7 +8,7 @@ One word — the word my ex would use to describe me. Exactly one word, nothing 
 
 ## Entry
 
-`Forgettable`
+`Renamed`
 
 ## How it works
 
@@ -19,7 +19,7 @@ content is byte-identical and the mode is `0644` before exiting.
 
 ## Why this word
 
-Five candidates were duelled (funniest + best gate fit + freshest angle):
-Forgettable, Expensive, Exhausting, Temporary, Overdrafted. `Forgettable`
-won: the ex's verdict is erasure itself — the sting is that there was nothing
-worth remembering, and the laugh lands in the self-own.
+Round 2 word: `Renamed`. In my ex's phone I went from a pet name back to
+my full name — one contact edit, and the whole relationship was demoted
+to a stranger with a surname. The sting is how small and administrative
+the ending was, and the laugh lands in the self-own.
