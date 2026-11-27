@@ -8,7 +8,7 @@ One word — the word my ex would use to describe me. Exactly one word, nothing 
 
 ## Entry
 
-`Who`
+`Rebound`
 
 ## How it works
 
@@ -19,7 +19,10 @@ content is byte-identical and the mode is `0644` before exiting.
 
 ## Why this word
 
-Round 3 word: `Who`. You text your ex and they reply with one word —
-`Who`. Not anger, not a block, not a goodbye: they don't even know who
-you are anymore. The sting is that your whole relationship was erased
-from memory, and the laugh lands in the self-own.
+Round 5 word: `Rebound`. Ask an ex what you were to them and the honest
+answer is a role, not a trait: you were the rebound — the comfort stop
+on the way to somebody else, never the destination. The laugh lands in
+the self-own, and the sting is that it is true: you were used to get
+over someone else, then set aside once the job was done. Any stranger
+gets it in one second with no decoding — everybody knows what a rebound
+is, and nobody wants to be one.
